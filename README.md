@@ -1,27 +1,30 @@
 Tenarai::Zcheme
 ===============
 
-a implementation of "μSchemeR"
+A wicked "[μSchemeR](http://tatsu-zine.com/books/scheme-in-ruby)" implementation.
+
+@zonuexe sed —— <q>全てのRubyist, Schemer, Lisperに殴られる覚悟はできてる</q>
 
 Installation
 ------------
 
-Add this line to your application's Gemfile:
-
-    gem 'tenarai-zcheme'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install tenarai-zcheme
+```bash
+git clone git@github.com:zonuexe/ruby-tenarai-zcheme.git
+cd ruby-tenarai-zcheme
+rake install
+```
 
 Usage
 -----
 
-TODO: Write usage instructions here
+```ruby
+require 'tenarai/zcheme'
+include Tenarai
+
+s = [:*, [:+, 1, 3], 8]
+puts Zcheme.eval(s)
+# => 32
+```
 
 Copyright
 ---------
